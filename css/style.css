@@ -81,7 +81,7 @@
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
 }
-.col-md-5 {
+.col-lg-5 {
     -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
  
@@ -91,13 +91,13 @@
     flex: 0 0 50%;
     max-width: 50%;
 }
-.col-md-7 {
+.col-lg-7 {
     -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;
     max-width: 58.333333%;
 }
 }
-.row [class*= col-md-]{
+.row [class*= col-]{
 	padding-left: 15px;
 	padding-right: 15px;
 	position: relative;
@@ -110,7 +110,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    margin-bottom: 50px
+    margin-bottom: 70px
 }
 .section-header img{
 	object-fit: cover;
@@ -122,8 +122,14 @@ right: 0;
 z-index: 1;
 }
 .wrap-main-header .img-main img{
+	max-width: 100%;
 	display: inline-block;
     border-radius: 55px;
+	box-shadow: 0px 2px 36px #a5a5a5c7;
+}
+.wrap-main-header .img-main>div{
+    display: inline-block;
+    border-radius: 68px;
 }
 .image-header{
 	position: absolute;
@@ -169,14 +175,13 @@ z-index: 1;
 .content_ .app-check a{
 	display: inline-flex;
 	background:#22233A;
-	padding: 20px 28px;
+	padding: 7px 28px;
 	border-radius: 45px;
 	text-decoration: none
 }
 .content_ .app-check .app-store{
 	margin-right: 25px
 }
-.content_ .app-check .ch-play{}
 .app-check .img-logo{
 	margin-right: 20px;
 }
@@ -186,7 +191,7 @@ z-index: 1;
     margin-top: 4px
 }
 .app-check .name-app{
-	text-align: left
+	text-align: left;
 }
 .app-check .name-app span{
 	display: block;
@@ -198,6 +203,9 @@ z-index: 1;
 	font-size: 20px;
 	font-weight: 600
 }
+.wrap-header .menu nav .close{
+		display: none;
+	}
 /*about*/
 .about{
 	margin-bottom: 70px
@@ -294,7 +302,16 @@ z-index: 1;
 	padding-right: 36px
 }
 .list-features .img-List-features img{}
-.list-features{}
+.list-features{
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+.features .img-features img{
+	max-width: 100%;
+	object-fit: cover
+}
 /*pricing*/
 .pricing{
 	background: #F8F6F6;
@@ -302,14 +319,17 @@ z-index: 1;
 	margin-bottom: 20px
 }
 .pricing .img-about{
-	border:2px solid #226BE2;
-	padding:30px 20px;
-	border-radius: 10px;
+	padding:30px 0px;
 	text-align: center;
-	transition: .3s
+	transition: .4s;
+	border-radius: 10px;
+	border: 2px solid transparent;
 }
-.pricing .img-about:hover{
-	padding:40px 20px;
+.pricing .img-about>div{
+	border-radius: 10px;
+	border:2px solid #226BE2;
+	padding:20px 20px;
+	/*transition: .3s*/
 }
 .pricing .col-md-4{
 	padding-top: 20px;
@@ -347,7 +367,22 @@ z-index: 1;
 	display: block;
 	font-size: 16px
 }
-.pricing .listaa img{}
+.pricing .listaa>span{
+	position: relative;
+	display: block;
+}
+.pricing .listaa>span i{
+	display: inline-block;
+    width: 12px;
+    height: 7px;
+    border-left: 3px solid #2068DE;
+    border-bottom: 3px solid #2068DE;
+    transition: .3s;
+    transform: rotate(-45deg);
+}
+.pricing .listaa>span i:before{
+	content: "";
+}
 .pricing .purchase{
 	text-decoration: none;
     font-size: 18px;
@@ -358,7 +393,30 @@ z-index: 1;
     border-radius: 25px;
     padding: 10px 25px;
 }
-
+.pricing .img-about:hover{
+	/*padding:40px 20px;*/
+	background: #2068DE;
+}
+.pricing .img-about:hover .name-item-about,
+.pricing .img-about:hover .pricing-pce,
+.pricing .img-about:hover .name-pricing,
+.pricing .img-about:hover .listaa span{
+	color: #fff
+}
+.pricing .img-about:hover .purchase{
+	background:#fff;
+	color: #2068DE;
+}
+.pricing .img-about:hover .listaa>span i{
+	border-color: #fff
+}
+.pricing .img-about:hover{
+	background:#2068DE;
+	border:2px solid #226BE2;
+}
+.pricing .img-about:hover>div{
+	border-color: transparent;
+}
 /*screeen*/
 .screenshots .slider-screen .owl-theme .owl-dots{
 	display: none
@@ -441,21 +499,28 @@ button,button:active{
 }
 .say-to .wrap-form-message .location{
 	background: #fff;
+	padding-top: 15px;
+	padding-bottom: 15px
 	
 }
 .say-to .wrap-form-message .form-message{
 	
 	
 }
-.wrap-form-message .location{
-	padding-top: 15px;
-	padding-bottom: 15px
+.wrap-form-message .location>div{
+	position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
 }
 .wrap-form-message .location .item-location{
-	padding-left: 10px
+	padding-left: 10px;
+	line-height: 1;
+	margin-bottom: 20px
 }
 .wrap-form-message .location b{
 	font-size: 17px;
+	margin-bottom: 7px
 }
 .wrap-form-message .location .name-location{
 font-size: 15.5PX
@@ -503,7 +568,11 @@ footer{
 }
 footer div{
 	font-family: 'Montserrat', sans-serif;
-	font-size: 16px
+	font-size: 16px;
+}
+footer div.col-md-6>div{
+	margin-top: 5px
+
 }
 footer div,
 footer ul li i{
