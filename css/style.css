@@ -61,9 +61,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-image: url(../images/backgroundHeader.png);
-    background-repeat: no-repeat; 
-  background-size:100%;
+    margin-bottom: 50px
 }
 .section_header img{
 	object-fit: cover;
@@ -74,11 +72,25 @@ top: 0;
 right: 0;
 z-index: 1;
 }
-.section_header .image_item img{
+.wrapMainHeader .imgmain img{
+	display: inline-block;
+    border-radius: 55px;
 }
-h2{
+.imgageHeader{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.content_ h2{
 	font-family: 'Montserrat', sans-serif;
-	font-size: 46px
+	font-size: 46px;
+	color: #fff;
+	font-weight: 600
+}
+.content_ p{
+	color: #fff;
+	margin-bottom: 35px
 }
 .wrapMainHeader{
 	display: flex;
@@ -87,26 +99,64 @@ h2{
 	color: #fff
 }
 .wrapMainHeader .imgmain{
-	width: 50%
+	width: 40%;
+	margin-top: 65px
 }
 .wrapMainHeader .contentMain{
 	position: relative;
-	width: 50%
+	width: 60%;
+	color: #fff
 }
 .wrapMainHeader .contentMain .content_{
 	position: absolute;
 	top: 50%;
 	right: 0;
 	transform: translateY(-50%);
+	text-align: right;
+}
+.content_ .appCheck{
+	padding-top: 30px
+}
+.content_ .appCheck a{
+	display: inline-flex;
+	background:#22233A;
+	padding: 20px 28px;
+	border-radius: 45px;
+	text-decoration: none
+}
+.content_ .appCheck .appStore{
+	margin-right: 25px
+}
+.content_ .appCheck .chPlay{}
+.appCheck .imgLogo{
+	margin-right: 20px;
+}
+.appCheck .imgLogo img{
+	width: 37px;
+    object-fit: cover;
+    margin-top: 4px
+}
+.appCheck .nameApp{
+	text-align: left
+}
+.appCheck .nameApp span{
+	display: block;
+	color: #fff;
+	text-transform: capitalize;
+	font-size: 14px
+}
+.appCheck .nameApp span:last-child{
+	font-size: 20px;
+	font-weight: 600
 }
 /*about*/
 .about{
-	margin-bottom: 50px
+	margin-bottom: 70px
 }
 .wrapTitle{
 	width: 80%;
 	margin:auto;
-	padding:40px 0 25px;
+	padding:50px 0 25px;
 }
 .about .wrapTitle{}
 .wrapTitle h3{
@@ -289,17 +339,119 @@ button,button:active{
 	outline-style: none
 }
 
+#next {
+    right: 10px;;
+}
+
+#prev {
+    left: 10px;
+}
+.controlSlide .btn-change {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+}
+#sliderScreen{
+	padding:20px 0;
+	position: relative;
+}
+.sliderSCREEN .slide{
+	display: inline-block;
+}
+
+ #sliderScreen .slide {
+    width: 20%;
+    height: auto;
+}
+
+#sliderScreen .slide:not(:first-child) {
+    display: none;
+}
+
+.controlSlide{
+	position: relative;
+	width: 150px;
+	margin:0 auto;
+}
 
 
 
+/**/
+section#slider {
+	width: 100%;
+}
+section#slider .slider-wrapper {
+    padding: 0;
+}
 
+section#slider .scroll-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
 
+section#slider ul {
+	display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    width: max-content;
+		margin-right: 0;
+    margin-left: 0;
+	  margin-bottom: 0;
+}
 
+section#slider li.slider {
+    display: inline-block;
+    position: relative;
+    width: 20vw;
+    left:-0%;
+    -webkit-transition:left 1s;
+    transition:left 1s;
+}
 
+section#slider li.slider img {
+    margin: 5px 10px 0 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+section#slider .more-slider {
+    padding: 1vh 5% 0;
+}
+section#slider .slide-controls {
+    color: #5896b0;
+    font-weight: 300;
+}
 
+section#slider .slide-controls span.slider-previous {
+    margin-right: 75px;
+}
 
+section#slider .slide-controls i {
+    font-size: 26px;
+}
 
+section#slider .more-slider a.button {
+    border: 1px solid #5896b0;
+    max-width: 200px;
+    color: #5896b0;
+    margin-top: 6vw;
+}
 
+section#slider .more-slider a.button:hover {
+    color: #fff;
+}
+
+section#slider .more-slider a.button:before {
+    background: #5896b0;
+}
+#slider{
+	overflow: hidden;
+	display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
 
 
 
