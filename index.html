@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="wrap-header">
             <div class="container">
                 <div class="row">
@@ -53,7 +53,7 @@
         </div>
     </header>
     <main>
-        <section class="section-header">
+        <section id="section-header">
             <img src="images/backgroundHeader.png" class="image-header" alt="">
             <div class="container">
                 <div class="wrap-main-header">
@@ -91,7 +91,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section id="about">
             <div class="container">
                 <div class="wrap-title">
                     <h3>About the app</h3>
@@ -128,7 +128,7 @@
                 </div>
             </div>
         </section>
-        <section class="features">
+        <section id="features">
             <!-- <img src="images/fear.png" alt="" class="background-features"> -->
             <div class="content-features">
                 <div class="container">
@@ -188,7 +188,7 @@
                 </div>
             </div>
         </section>
-        <section class="about pricing">
+        <section id="pricing">
             <div class="container">
                 <div class="wrap-title">
                     <h3>Pricing Plan</h3>
@@ -249,7 +249,7 @@
                 </div>
             </div>
         </section>
-        <section class="screenshots">
+        <section id="screenshots">
             <div class="container">
                 <div class="wrap-title text-center">
                     <h3>App Screenshots</h3>
@@ -263,33 +263,78 @@
         </section>
         <section id="some-talk">
             <div class="container">
-            	<div class="wrap-title text-center">
+                <div class="wrap-title text-center">
                     <h3>SOME TALK OF OUR CLIENTS</h3>
                 </div>
                 <div class="messe-client">
-                    <div id="item-client1" class="client_" >
-                        <div class="item-client-child">
-                        	<div class="avatar"><img src="./images/client1.png"></div>
-                        	<div class="name-client">OLIVER GOMEZ</div>
-                        	<div class="position">CEO of google</div>
+                    <div class="slideshow-container">
+                        <div id="item-client1" class="client_ fade">
+                            <div class="item-client-child">
+                                <div class="avatar"><img src="./images/client1.png"></div>
+                                <div class="name-client">OLIVER GOMEZ</div>
+                                <div class="position">CEO of google</div>
+                                <div class="content-client">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</div>
+                            </div>
+                            <div class="item-client-child">
+                                <div class="avatar"><img src="./images/client2.png"></div>
+                                <div class="name-client">OLIVER GOMEZ</div>
+                                <div class="position">CEO of google</div>
+                                <div class="content-client">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</div>
+                            </div>
+                        </div>
+                        <div id="item-client1" class="client_ fade">
+                            <div class="item-client-child">
+                                <div class="avatar"><img src="./images/client1.png"></div>
+                                <div class="name-client">OLIVER GOMEZ</div>
+                                <div class="position">CEO of google</div>
+                                <div class="content-client">Lorem Ipsum is simply dummy text of. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good the printing and typesetting industry.</div>
+                            </div>
+                            <div class="item-client-child">
+                                <div class="avatar"><img src="./images/client2.png"></div>
+                                <div class="name-client">OLIVER GOMEZ</div>
+                                <div class="position">CEO of google</div>
+                                <div class="content-client">Lorem Ipsum is simply dummy text of the printing and typesetting industry. the industry's standard dummy text ever since the 1500s,good. Lorem Ipsum has</div>
+                            </div>
+                        </div>
+                        <div id="item-client1" class="client_ fade">
+                            <div class="item-client-child">
+                                <div class="avatar"><img src="./images/client1.png"></div>
+                                <div class="name-client">OLIVER GOMEZ</div>
+                                <div class="position">CEO of google</div>
+                                <div class="content-client">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</div>
+                            </div>
+                            <div class="item-client-child">
+                                <div class="avatar"><img src="./images/client2.png"></div>
+                                <div class="name-client">OLIVER GOMEZ</div>
+                                <div class="position">CEO of google</div>
+                                <div class="content-client">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                            </div>
+                        </div>
+                        <div id="item-client1" class="client_ fade">
+                            <div class="item-client-child">
+                                <div class="avatar"><img src="./images/client1.png"></div>
+                                <div class="name-client">OLIVER GOMEZ</div>
+                                <div class="position">CEO of google</div>
+                                <div class="content-client">Text ever since the 1500s,good Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy .</div>
+                            </div>
+                            <div class="item-client-child">
+                                <div class="avatar"><img src="./images/client2.png"></div>
+                                <div class="name-client">OLIVER GOMEZ</div>
+                                <div class="position">CEO of google</div>
+                                <div class="content-client">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,good.</div>
+                            </div>
                         </div>
                     </div>
-                    <div id="item-client2" class="client_">
-                       2
-                    </div>
-                    <div id="item-client3" class="client_">
-                       3
-                    </div>
-                    <div class="dots">
-                        <div class="dot dot1"></div>
-                        <div class="dot dot2"></div>
-                        <div class="dot dot3"></div>
+                    <div class="box-dot-control" style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
             </div>
         </section>
         <!-- say-top -->
-        <section class="say-to">
+        <section id="say-to">
             <div class="container">
                 <div class="wrap-title">
                     <h3>Say Hello To Us!</h3>
@@ -335,13 +380,13 @@
             </div>
         </section>
         <!-- map -->
-        <section class="map-location">
+        <section id="map-location">
             <div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d165336.02963319287!2d90.37057948745779!3d23.695811473518642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9e7d89677bd%3A0x3b5c34ece56ca8e!2zSnVyYWluLCDEkOG6r2MtY2EsIELEg25nLWxhLcSRw6l0!5e0!3m2!1svi!2s!4v1614745991030!5m2!1svi!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
