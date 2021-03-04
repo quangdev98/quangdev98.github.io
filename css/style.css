@@ -679,7 +679,51 @@ footer ul li{
 }
 
 
-
+/**/
+/**/
+/**/
+#some-talk{
+	background:#4085F6;
+	padding-bottom: 90px
+}
+#some-talk .wrap-title h3{
+	color: #fff
+}
+.messe-client {
+    position: relative;
+    width: 100%;
+}  
+#some-talk .messe-client .client_ {
+    width: 650px;
+    height: 400px;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    transition: .5s;
+}
+#some-talk .messe-client .client_:first-child{
+	opacity: 1
+}
+.dot{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    z-index: 99;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+    box-shadow: 0px 0px 5px #fff;
+}
+.dot.dot1{margin-left:-30px}
+.dot.dot2{margin-left:-10px}
+.dot.dot3{margin-left:10px}
+.dot.dot1:hover{background:#fff}
+.dot.dot2:hover{background:#fff}
+.dot.dot3:hover{background:#fff}
 
 
 
