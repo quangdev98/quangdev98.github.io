@@ -1,14 +1,14 @@
-@supports (font-variation-settings: "wght" 400) {
+
 *, ul{
     margin: 0;
     padding: 0;
     font-size: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: Poppins-Regular;
     color: #737373;
     box-sizing: border-box;
     font-weight: 400
 }
-}
+
 .container{
 	width: 100%;
     padding-right: 15px;
@@ -44,7 +44,7 @@
 	display: flex;
 	font-size: 34px;
 	color: #fff;
-    font-weight: 500;
+	font-family: Poppins-SemiBold;
     letter-spacing: 1.3px;
 
 }
@@ -96,7 +96,7 @@
 	text-decoration: none;
 	padding: 18px 44px;
 	font-size: 25.33px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat-Regular;
 }
 .wrap-header .row>div.col-md-2:first-child{
 	flex: 0 0 15%;
@@ -182,10 +182,9 @@ z-index: 1;
 	height: 100%
 }
 .content_ h2{
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat-SemiBold;
 	font-size: 46px;
 	color: #fff;
-	font-weight: bold;
 	line-height: 62px;
 	margin-bottom: 30px
 }
@@ -249,7 +248,8 @@ z-index: 1;
 }
 .app-check .name-app span:last-child{
 	font-size: 20px;
-	line-height: 35px
+	line-height: 35px;
+	font-family: Montserrat-SemiBold
 }
 .wrap-header .menu nav .close{
 		display: none;
@@ -266,11 +266,10 @@ z-index: 1;
 }
 #about .wrap-title{}
 .wrap-title h3{
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat-Medium;
 	font-size: 36px;
 	text-transform: capitalize;
 	margin-bottom: 42px;
-	font-weight: 500;
 	line-height: 36px
 }
 .wrap-title p{
@@ -282,6 +281,11 @@ z-index: 1;
 	box-shadow: 0px 2px 20px #221f1f29;
 	color: #fff;
 	text-decoration: none;
+	transition: .3s
+}
+#about .wrap-item-about:hover{
+	box-shadow: none;
+	border:1px solid #4085F6;
 }
 #about .wrap-item-about .img-about{
 	padding: 55px 30px 50px;
@@ -294,10 +298,9 @@ z-index: 1;
 }
 #about .wrap-item-about .name-item-about{
 	display: block;
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat-Regular;
 	font-size: 24px;
 	line-height: 36px;
-	font-weight: 500;
 	margin:33px 0 30px;
 	transition: .3s
 }
@@ -322,7 +325,7 @@ z-index: 1;
 	object-fit: cover;
 }
 #features .content-features{
-	padding-bottom: 232px
+	padding-bottom: 234px
 }
 #features .wrap-title{
 	margin-bottom: 30px
@@ -337,9 +340,8 @@ z-index: 1;
 	color: #fff;
 	margin-bottom: 23px;
 	display: block;
-	font-weight: 500;
 	line-height: 36px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat-Regular;
 }
 #features .content-item-features p{
 	font-size: 16px;
@@ -387,35 +389,26 @@ z-index: 1;
 }
 #pricing .col-md-4{
 }
-@supports (font-variation-settings: "wght" 600) {
-	#pricing .name-item-about{
-		font-size: 24px;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 600;
-		line-height: 36px;
-		margin-bottom: 23px
+#pricing .name-item-about{
+	font-size: 24px;
+	font-family: Montserrat-SemiBold;
+	line-height: 36px;
+	margin-bottom: 23px
 
-	}
 }
-@supports (font-variation-settings: "wght" 400) {
 #pricing .pricing-pce{
 	font-size: 36px;
 	color: #4085F6;
 	display: block;
-	font-weight: 400;
 	line-height: 36px;
     margin-bottom: 23px;
 }
-}
-@supports (font-variation-settings: "wght" 500) {
 #pricing .name-pricing{
 	font-size: 18px;
-	font-weight: 500;
 	margin: 5px 0 15px;
 	display: block;
 	line-height: 36px;
-
-}
+	font-family: Poppins-SemiBold;
 }
 #pricing .listaa{
 	margin: 20px 0;
@@ -451,6 +444,8 @@ z-index: 1;
     border-radius: 30px;
     padding: 8px 55px;
     line-height: 36px;
+    font-family: Poppins-Medium;
+    color: #4085F6
 }
 #pricing .img-about:hover .name-item-about,
 #pricing .img-about:hover .pricing-pce,
@@ -475,37 +470,53 @@ z-index: 1;
 	border-color: transparent;
 }
 /*screeen*/
-#screenshots .slider-screen .owl-theme .owl-dots{
-	display: none
-}
-#screenshots .owl-theme .owl-nav {
-    margin-top: 30px;
-}
-#screenshots .owl-carousel .owl-nav button span{
-	display: none;
-}
-#screenshots .owl-carousel .owl-nav button{
+#screenshots .slider-screen{}
+#screenshots .slider-screen .box-slideshow{
+	display: flex;
 	position: relative;
-	width: 50px;
-	height: 50px;
 }
-#screenshots .owl-carousel .owl-nav button.owl-prev{}
-#screenshots .owl-carousel .owl-nav button.owl-next{}
-#screenshots .owl-carousel .owl-nav button.owl-prev:before{
-	position: absolute;
-	content: url(../images/next.png);
-	top: 0;
-	left: -30px;
+#screenshots .box-slideshow .item-slide{
+	width: 20%;
+	display: none;
+	/*height: 100px;*/
+	/*background:red;*/
+	color: #fff;
+	padding: 0 12px;
 }
-#screenshots .owl-carousel .owl-nav button.owl-next:before{
-	content: url(../images/prev.png);
-	position: absolute;
-	top: 0;
-	right: -30px
+#screenshots .box-slideshow .item-slide img{
+	width: 100%;
+	object-fit: cover;
+	display: inline-block;
+	height: 100%;
+	box-shadow: 0px 2px 20px #82808029;
 }
-#screenshots .owl-theme .owl-nav [class*=owl-]:hover {
-    background: transparent;
+#screenshots .control-slide{
+	display: block;
+    text-align: center;
+    margin: 40px 0 70px;
 }
+#screenshots .control-slide .prev,
+ #screenshots .control-slide .next {
+  cursor: pointer;
+  position: relative;
+  bottom: 0;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+#screenshots .control-slide .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+
+
+
+
 
 button,button:active{
 	outline: none;
@@ -581,17 +592,20 @@ display: flex;
 	margin-right: 25px;
 	margin-top: 10px
 }
-@supports (font-variation-settings: "wght" 500) {
+.wrap-form-message .icon_loca i{
+	color: #226BE2
+}
 .wrap-form-message .location b{
 	font-size: 17px;
 	margin-bottom: 7px;
 	color: #3B3B3B;
     line-height: 35px;
-    font-weight: 500
+    font-family: Poppins-SemiBold
 }
 .wrap-form-message .location .name-location{
 font-size: 15.5px;
 line-height: 35px;
+color: #585858
 }
 .wrap-form-message .form-message{
 
@@ -622,6 +636,7 @@ line-height: 35px;
     border: none;
     cursor: pointer;
     line-height: 18px;
+    font-family: Poppins-Medium;
     transition: .3s
 }
 input, input:focus,textarea,textarea:focus, button, button:focus{
@@ -640,7 +655,7 @@ input, input:focus,textarea,textarea:focus, button, button:focus{
 	font-size: 15.5px
 }
 #footer div{
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat-Regular;
 	font-size: 16px;
 	line-height: 21px
 }
@@ -752,7 +767,7 @@ input, input:focus,textarea,textarea:focus, button, button:focus{
 	text-transform: uppercase;
 	line-height: 30px;
 	padding: 10px 0;
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat-SemiBold;
 }
 .messe-client .item-client-child .position{
 	color: #fff;
