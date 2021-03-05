@@ -47,28 +47,23 @@ function carousel() {
 // 
 //
 var slide_ = 5;
-var number = 1;
-slideScreen(number);
+slideScreen(slide_);
 function plusSlides(m) {
-    slideScreen(number += m);
+    slideScreen(slide_ += m);
 }
 function slideScreen(m){
     var i;
-    var z;
     var x = document.getElementsByClassName("item-slide");
-    slide_++;
+    if (m < x.length && m > slide_) {
+        slide_ = 5;
+    };
     if (slide_ > x.length) {
         slide_ = 5;
-    }
-    for(i = 0; i < slide_ - 1; i++) {
+    };
+    for(i = 0; i < slide_ ; i++) {
         x[i].style.display = "block";
     }; 
-        // x[slide_ - 1].style.display = "grid";
     console.log(slide_); 
-    // if (slide_ < n){
-    //     slide_ = 
-    // }
-    // x[number - 1].style.display = "block";
 }
 
 

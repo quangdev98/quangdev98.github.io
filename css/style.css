@@ -325,7 +325,7 @@ z-index: 1;
 	object-fit: cover;
 }
 #features .content-features{
-	padding-bottom: 234px
+	padding-bottom: 232px
 }
 #features .wrap-title{
 	margin-bottom: 30px
@@ -565,15 +565,24 @@ button,button:active{
 #say-to .wrap-form-message{
 	
 }
-#say-to .wrap-title h3{ position: relative; line-height: 46px }
+#say-to .wrap-title h3{ 
+	position: relative; 
+	line-height: 46px;
+	margin-bottom: 32px;
+	font-family: Raleway-SemiBold;
+	 }
 #say-to .wrap-title h3:after{
  content:"";
 display: flex;
     width: 70px;
-    height: 3px;
+    height: 4px;
     background: #226BE2;
     margin: 0 auto;
     flex-wrap: wrap;
+    margin-top: 10px
+}
+#say-to .wrap-title h3 p{
+		font-family: Poppins-Light
 }
 .wrap-form-message .location>div{
 	background: #fff;
@@ -746,6 +755,7 @@ input, input:focus,textarea,textarea:focus, button, button:focus{
 	margin-top: -25%;
 	width: 122px;
 }
+#some-talk .content-client .comma{}
 #some-talk h3{
 	color: #fff
 }
@@ -776,14 +786,32 @@ input, input:focus,textarea,textarea:focus, button, button:focus{
 	margin-bottom: 30px
 }
 .messe-client .item-client-child .content-client{
+	position: relative;
+}
+.messe-client .item-client-child .content-client p{
 	color: #fff;
 	font-size: 15px;
 	line-height: 26px;
 	width: 75%;
     text-align: left;
     margin: 0 auto;
+    position: relative;
 }
-
+#some-talk .content-client .comma:first-child{
+	position: absolute;
+	left: 30px;
+	top: -10px;
+	display: block;
+}
+#some-talk .content-client .comma i{
+	color: #fff
+}
+#some-talk .content-client .comma:last-child{
+	position: absolute;
+	right: 90px;
+    bottom: -4px;
+	display: block;
+}
 
 
 
