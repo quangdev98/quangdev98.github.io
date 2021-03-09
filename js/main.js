@@ -4,6 +4,7 @@ showSlides(slideIndex);
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
+
 function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("client_");
@@ -24,6 +25,7 @@ function showSlides(n) {
 var slide = 0;
 var dot = 0;
 carousel();
+
 function carousel() {
     var i;
     var y;
@@ -40,38 +42,81 @@ function carousel() {
         dots[y].className = dots[y].className.replace("active", "");
     }
     dot++;
-     if (dot > dots.length) { dot = 1 }
+    if (dot > dots.length) { dot = 1 }
     dots[dot - 1].className += " active";
-    setTimeout(carousel, 4000); 
+    // setTimeout(carousel, 4000); 
 }
 // 
 //
-var slide_ = 5;
-slideScreen(slide_);
-function plusSlides(m) {
-    slideScreen(slide_ += m);
-}
-function slideScreen(m){
-    var i;
-    var x = document.getElementsByClassName("item-slide");
-    if (m < x.length && m > slide_) {
-        slide_ = 5;
-    };
-    if (slide_ > x.length) {
-        slide_ = 5;
-    };
-    for(i = 0; i < slide_ ; i++) {
-        x[i].style.display = "block";
-    }; 
-    console.log(slide_); 
+
+let slider = document.querySelectorAll(".slider-screen .box-slideshow .item-slide");
+let start = 0;
+let end = 5;
+let flag = 0;
+
+function removeSlide() {
+    slider.forEach((value, index) => {
+        value.classList.remove('active');
+    })
 }
 
+function displaySlide() {
+    removeSlide();
+    for (let i = start; i < end; i++) {
+        slider[i].classList.add('active');
+    }
+}
 
+function next() {
+    start += 1;
+    end += 1;
+    if (end > slider.length) {
+        start = 0;
+        end = 5;
+    }
+    displaySlide();
+};
 
+function prev() {
+    if (start == 0) {
+        displaySlide();
+    } else {
+        start -= 1;
+        if (start == 0) {
+            start = 0;
+            end = 5;
+        } else {
+            end -= 1;
+        }
+        displaySlide();
+    }
+}
+document.querySelector('.control-slide .next').onclick = function() {
+    next();
+}
+document.querySelector('.control-slide .prev').onclick = function() {
+    prev();
+}
 
+// menu
+var parentMenu = document.getElementById('wrapper-menu');
 
+document.querySelector('#open-menu').onclick = function() {
+    parentMenu.classList.add('active');
+}
+document.getElementById('close-menu').onclick = function() {
+    parentMenu.classList.remove('active');
+}
 
-
-
-
+// scroll
+var offset = 300;
+var back_to_top = document.getElementById('header');
+window.addEventListener('scroll', function() {
+    if (pageYOffset > offset) {
+        back_to_top.classList.add('fixed-menu');
+    } else {
+        back_to_top.classList.remove('fixed-menu');
+    };
+     parentMenu.classList.remove('active');
+});
 

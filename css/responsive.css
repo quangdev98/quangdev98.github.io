@@ -67,6 +67,10 @@
     .features .content-item-features b {
         margin-bottom: 15px
     }
+
+    .messe-client {
+        margin-top: 60px;
+    }
 }
 
 @media(max-width: 1280px) {
@@ -147,6 +151,10 @@
         padding-top: 20px
     }
 
+    .list-features li:first-child {
+        padding-top: 0px
+    }
+
     .pricing .col-md-4 {
         padding-top: 0;
         padding-bottom: 0;
@@ -192,9 +200,182 @@
         padding: 10px 17px;
         font-size: 18px;
     }
+
+    #some-talk img {
+        width: 90px
+    }
 }
 
-@media(max-width: 1023px) {
+@media(max-width: 1200px) {
+
+    /**{
+        font-
+    }*/
+    .wrap-header .row>div.col-md-8 {
+        flex: 0 0 68%;
+        max-width: 68%;
+    }
+
+    .wrap-header .row>div.col-md-2:last-child {
+        flex: 0 0 17%;
+        max-width: 17%;
+    }
+
+    .wrap-title p {
+        line-height: 30px;
+    }
+
+    .wrap-header .tryFor {
+        text-align: right;
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    #about .wrap-item-about .img-about {
+        padding: 40px 20px 40px;
+    }
+
+    #about .wrap-item-about img {
+        width: 70px;
+        object-fit: cover;
+    }
+
+    #about .wrap-item-about .name-item-about {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 20px 0 20px;
+    }
+
+    #about .wrap-item-about p {
+        display: block;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .list-features li .img-List-features {
+        padding-right: 25px;
+    }
+
+    .list-features .img-List-features img {
+        max-width: 50px;
+    }
+
+    #features .content-item-features h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        line-height: 20px;
+    }
+
+    #features .content-item-features p {
+        font-size: 13px;
+        line-height: 25px;
+    }
+
+    #features .content-features {
+        padding-bottom: 70px;
+    }
+
+    #features {
+        margin-bottom: 0
+    }
+
+    /**/
+    /**/
+    #pricing .img-about>div {
+        padding: 30px 15px;
+    }
+
+    #pricing .name-item-about {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+
+    #pricing .pricing-pce {
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+
+    #pricing .name-pricing {
+        font-size: 16px;
+        margin: 0px 0 5px;
+        line-height: 20px;
+    }
+
+    #pricing .listaa {
+        margin: 10px 0;
+    }
+
+    #pricing .listaa>p {
+        line-height: 25px;
+    }
+
+    #pricing .listaa span {
+        font-size: 13px;
+    }
+
+    #pricing .purchase {
+        font-size: 14px;
+        padding: 0px 25px;
+    }
+
+    /**/
+    /**/
+    /**/
+    /**/
+    #pricing {
+        padding: 0px 0px 90px 0;
+    }
+
+    #screenshots .box-slideshow .item-slide {
+        padding: 0 10px;
+    }
+
+    #screenshots .control-slide img {
+        width: 50px;
+        object-fit: cover
+    }
+
+    .messe-client .item-client-child {
+        padding: 15px 15px 30px;
+    }
+
+    .messe-client .item-client-child .content-client p {
+        width: 90%
+    }
+
+    #some-talk .content-client .comma:first-child {
+        left: -5px
+    }
+
+    /**/
+    /**/
+    .wrap-form-message .location>div {
+        padding: 20px 15px;
+    }
+
+    .wrap-form-message .location .item-location {
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+
+    .wrap-form-message .location .item-location .icon_loca {
+        margin-right: 20px;
+    }
+
+    #footer {
+        padding: 70px 0;
+    }
+
+    #footer ul li i {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+@media(max-width: 1024px) {
     .wrap-header .col-md-2 {
         flex: 0 0 100%;
         max-width: 100%;
@@ -206,7 +387,8 @@
     }
 
     .wrap-header {
-        top: 0
+        top: 0;
+        padding: 10px 0;
     }
 
     .wrap-header .row [class*=col-] {
@@ -214,25 +396,30 @@
     }
 
     .wrap-header .row .col-md-8 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
         padding: 0;
+        /*height: 100vh*/
     }
-
-    .wrap-header .menu ul.list-menu {}
 
     .wrap-header .menu nav {
         display: block;
+        width: 100%;
+        position: inherit;
+        z-index: 10;
+    }
+
+    .wrap-header .menu ul.list-menu {
+        /*display: none;*/
         background: #fff;
         max-width: 350px;
         width: 100%;
         height: 100vh;
         position: fixed;
-        z-index: 10;
+        z-index: 3;
         padding: 15px;
-        padding-top: 45px;
+        padding-top: 50px;
+        top: 0;
+        right: -100%;
+        transition: .4s
     }
 
     .menu .list-menu li.item-menu {
@@ -243,22 +430,22 @@
         color: #000
     }
 
-    .wrap-header .menu nav .close {
+    .wrap-header .menu nav .open {
         display: block;
         position: absolute;
-        top: 15px;
-        left: 32px;
+        top: 25px;
+        right: 45px;
         z-index: 2;
         width: 26px;
         height: 23px;
-        transition: .3s
+        transition: .3s;
     }
 
-    .menu nav .close span {
+    .menu nav .open span {
         display: inline-block;
         width: 100%;
         height: 3px;
-        background: #737373;
+        background: #fff;
         border-radius: 1px;
         position: absolute;
         top: 9.5px;
@@ -266,33 +453,104 @@
         transition: .3s
     }
 
-    .menu nav .close span:before {
-    	content: "";
-    	position: absolute;
-    top: -9.5px;
-    width: 50%;
-    height: 3px;
-    background: #737373;
-    left: 0;
-    border-radius: 2px;
-    display: inline-block;
-    transition: .3s
+    .menu nav .open span:before {
+        content: "";
+        position: absolute;
+        top: -9.5px;
+        width: 50%;
+        height: 3px;
+        background: inherit;
+        left: 0;
+        border-radius: 2px;
+        display: inline-block;
+        transition: .3s
     }
 
-    .menu nav .close span:after {
-    	content: "";
-    	position: absolute;
-	    bottom: -9.5px;
-	    width: 50%;
-	    height: 3px;
-	    background: #737373;
-	    right: 0;
-	    border-radius: 2px;
-	    display: inline-block;
-	    transition: .3s
+    .menu nav .open span:after {
+        content: "";
+        position: absolute;
+        bottom: -9.5px;
+        width: 50%;
+        height: 3px;
+        background: inherit;
+        right: 0;
+        border-radius: 2px;
+        display: inline-block;
+        transition: .3s
     }
-    .menu nav .close:hover span:before,
-    .menu nav .close:hover span:after {
-    	width: 100%
+
+    .menu nav .open:hover span:before,
+    .menu nav .open:hover span:after {
+        width: 100%
+    }
+
+    .wrap-header .menu nav.active ul.list-menu {
+        display: block;
+        right: 0
+    }
+
+    .wrap-header .tryFor {
+        display: none
+    }
+
+    .menu .list-menu li.item-menu.try-mobile,
+    .menu .list-menu li.item-menu.try-mobile .tryFor {
+        display: block;
+    }
+
+    .menu .list-menu li.item-menu.try-mobile .tryFor {
+        text-align: center;
+        margin-top: 20px;
+        border: 2px solid #4085F6;
+        border-radius: 20px;
+    }
+
+    .menu .list-menu li.item-menu.try-mobile .close-menu {
+        width: 26px;
+        height: 23px;
+        position: absolute;
+        top: 25px;
+        right: 45px
+    }
+
+    .menu .list-menu .try-mobile .close-menu .icon-close {
+        display: block;
+    }
+
+    .menu .list-menu .try-mobile .close-menu .icon-close:before,
+    .menu .list-menu .try-mobile .close-menu .icon-close:after {
+        content: "";
+        display: inherit;
+        width: 100%;
+        height: 2px;
+        background: #737373;
+        top: 9px;
+        position: absolute;
+
+    }
+
+    .menu .list-menu .try-mobile .close-menu .icon-close:before {
+        transform: rotate(45deg);
+        left: 0px;
+    }
+
+    .menu .list-menu .try-mobile .close-menu .icon-close:after {
+        transform: rotate(-45deg);
+        right: 0px;
+    }
+    #header.fixed-menu .wrap-header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 11;
+        background: #fff;
+        box-shadow: 0px 1px 6px #221f1f29;
+    }
+    #header.fixed-menu .wrap-header .logo h1 {
+        color: #737373
+    }
+    #header.fixed-menu .wrap-header nav .open span {
+        background:#737373;
     }
 }
