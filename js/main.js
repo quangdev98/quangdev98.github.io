@@ -67,37 +67,12 @@ function displaySlide() {
 function next() {
     start += 1;
     end += 1;
+        console.log(number);
     if (end > slider.length) {
         start = 0;
         end = number;
     }
     displaySlide();
-};
-responsive();
-window.addEventListener('resize', responsive);
-function responsive(){
-    let scroll = document.documentElement.clientWidth;
-    // console.log(aaad);
-    if (scroll < 580) {
-        end = 1;
-        number = end;
-        displaySlide();
-        next();
-    } else if (scroll > 580 & scroll < 768) {
-        end = 3;
-        displaySlide();
-
-    } else{
-        if (scroll > 768 & scroll < 1200) {
-        end = 4;
-        displaySlide();
-    }
-        else {
-            end = 5;
-            displaySlide();
-        }
-    }
-console.log(scroll);
 };
 function prev() {
     if (start == 0) {
@@ -106,13 +81,42 @@ function prev() {
         start -= 1;
         if (start == 0) {
             start = 0;
-            end;
+            end = number;
         } else {
             end -= 1;
         }
         displaySlide();
     }
 }
+function listFunction(){
+    displaySlide();
+    number = end;
+    next();
+    prev();
+}
+responsive();
+window.addEventListener('resize', responsive);
+function responsive(){
+    let scroll = document.documentElement.clientWidth;
+    // console.log(aaad);
+    if (scroll < 580) {
+        end = 1;
+        listFunction()
+    } else if (scroll > 580 & scroll < 768) {
+        end = 3;
+        listFunction()
+    } else{
+        if (scroll > 768 & scroll < 1200) {
+            end = 4;
+            listFunction()
+        }
+        else {
+            end = 5;
+            listFunction()
+        }
+    }
+// console.log(scroll);
+};
 document.querySelector('.control-slide .next').onclick = function() {
     next();
 }
