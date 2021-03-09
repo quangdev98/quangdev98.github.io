@@ -108,6 +108,8 @@ document.getElementById('close-menu').onclick = function() {
     parentMenu.classList.remove('active');
 }
 
+// 
+
 // scroll
 var offset = 300;
 var back_to_top = document.getElementById('header');
@@ -119,4 +121,5 @@ window.addEventListener('scroll', function() {
     };
      parentMenu.classList.remove('active');
 });
+
 
