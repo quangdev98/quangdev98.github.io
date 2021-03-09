@@ -44,7 +44,7 @@ function carousel() {
     dot++;
     if (dot > dots.length) { dot = 1 }
     dots[dot - 1].className += " active";
-    // setTimeout(carousel, 4000); 
+    setTimeout(carousel, 4000); 
 }
 // 
 //
