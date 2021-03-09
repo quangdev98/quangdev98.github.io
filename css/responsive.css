@@ -723,6 +723,9 @@
 .list-features {
     left: 0
 }
+#screenshots .box-slideshow .item-slide {
+    width: 100%
+}
 }
 @media(max-width: 414px) {
      .wrap-main-header{

@@ -565,7 +565,7 @@ z-index: 1;
 	position: relative;
 }
 #screenshots .box-slideshow .item-slide{
-	width: 20%;
+	width: inherit;
 	display: none;
 	color: #fff;
 	padding: 0 12px;

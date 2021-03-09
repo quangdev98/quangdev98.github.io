@@ -48,35 +48,57 @@ function carousel() {
 }
 // 
 //
-
 let slider = document.querySelectorAll(".slider-screen .box-slideshow .item-slide");
 let start = 0;
-let end = 5;
-let flag = 0;
-
+let end = 0;
+let number = 0;
 function removeSlide() {
     slider.forEach((value, index) => {
         value.classList.remove('active');
     })
 }
-
 function displaySlide() {
+    // responsive();
     removeSlide();
     for (let i = start; i < end; i++) {
         slider[i].classList.add('active');
     }
 }
-
 function next() {
     start += 1;
     end += 1;
     if (end > slider.length) {
         start = 0;
-        end = 5;
+        end = number;
     }
     displaySlide();
 };
+responsive();
+window.addEventListener('resize', responsive);
+function responsive(){
+    let scroll = document.documentElement.clientWidth;
+    // console.log(aaad);
+    if (scroll < 580) {
+        end = 1;
+        number = end;
+        displaySlide();
+        next();
+    } else if (scroll > 580 & scroll < 768) {
+        end = 3;
+        displaySlide();
 
+    } else{
+        if (scroll > 768 & scroll < 1200) {
+        end = 4;
+        displaySlide();
+    }
+        else {
+            end = 5;
+            displaySlide();
+        }
+    }
+console.log(scroll);
+};
 function prev() {
     if (start == 0) {
         displaySlide();
@@ -84,7 +106,7 @@ function prev() {
         start -= 1;
         if (start == 0) {
             start = 0;
-            end = 5;
+            end;
         } else {
             end -= 1;
         }
@@ -96,7 +118,13 @@ document.querySelector('.control-slide .next').onclick = function() {
 }
 document.querySelector('.control-slide .prev').onclick = function() {
     prev();
-}
+};
+// 
+
+
+
+
+
 
 // menu
 var parentMenu = document.getElementById('wrapper-menu');
