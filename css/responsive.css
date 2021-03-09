@@ -538,19 +538,5 @@
         transform: rotate(-45deg);
         right: 0px;
     }
-    #header.fixed-menu .wrap-header{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 11;
-        background: #fff;
-        box-shadow: 0px 1px 6px #221f1f29;
-    }
-    #header.fixed-menu .wrap-header .logo h1 {
-        color: #737373
-    }
-    #header.fixed-menu .wrap-header nav .open span {
-        background:#737373;
-    }
+    
 }
