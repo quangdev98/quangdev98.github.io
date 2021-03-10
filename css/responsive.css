@@ -333,11 +333,30 @@
         padding: 0 10px;
     }
 
-    #screenshots .control-slide img {
-        width: 60px;
-        object-fit: cover
+    #screenshots .control-slide .prev,
+     #screenshots .control-slide .next{
+      cursor: pointer;
+      position: relative;
+      bottom: 0;
+      width: 40px;
+      height: 40px;
     }
-
+    #screenshots .control-slide .prev>span:before,
+    #screenshots .control-slide .next>span:before{
+        margin-left: 3px;
+         border-left: 4px solid #fff;
+        border-bottom: 4px solid #fff;
+        border-right: 4px solid transparent;
+        border-top: 4px solid transparent;
+        transform: rotate(45deg);
+    }
+    #screenshots .control-slide .prev>span:after,
+    #screenshots .control-slide .next>span:after{
+        width: 16px;
+        height: 4px;
+        background: #fff;
+        margin-left: -6px;
+    }
     .messe-client .item-client-child {
         padding: 15px 15px 30px;
     }
@@ -504,7 +523,10 @@
         border: 2px solid #4085F6;
         border-radius: 20px;
     }
-
+    #header.fixed-menu .wrap-header .tryFor a {
+        background: #fff;
+        color: #4085F6;
+    }
     .menu .list-menu li.item-menu.try-mobile .close-menu {
         width: 26px;
         height: 23px;
@@ -593,7 +615,7 @@
     line-height: 25px;
 }
 .content_ .app-check {
-    /*display: flex;*/
+    display: flex;
     padding-top: 20px;
 }
 .content_ .app-check .app-store {
@@ -639,6 +661,23 @@
 }
 .wrap-main-header .img-main img {
     border-radius: 35px
+}
+.menu .list-menu li.item-menu .menu-child ,
+li.item-menu .menu-child .menu-child-item {
+    box-shadow: none
+}
+li.item-menu .menu-child a.child-item-menu {
+    display: block;
+    border-bottom: 1px solid #737373;
+    padding-bottom: 10px;
+}
+.menu .list-menu li.item-menu {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+li.item-menu .menu-child .menu-child-item a.child-item-menu {
+    padding-left: 10px
 }
 }
 @media(max-width: 768px) {
@@ -726,6 +765,11 @@
 #screenshots .box-slideshow .item-slide {
     width: 100%
 }
+#say-to .wrap-title h3:after {
+    margin-top: -4px;
+    width: 50px;
+    height: 2px;
+}
 }
 @media(max-width: 414px) {
      .wrap-main-header{
@@ -758,7 +802,7 @@
     .wrap-title h3 {
     font-size: 20px;}
     .wrap-title p {
-    font-size: 13px;
+    font-size: 11px;
     line-height: 22px;
 }
 .list-features li .img-List-features {
@@ -785,8 +829,8 @@
 }
 .messe-client .item-client-child .content-client p {
     color: #fff;
-    font-size: 13px;
-    line-height: 25px;
+    font-size: 11px;
+    line-height: 20px;
     }
     .wrap-form-message .location .item-location {
     margin-bottom: 0px;
@@ -816,5 +860,86 @@
 #footer div.col-md-6>div {
     margin-top: 0px;
     margin-bottom: 10px
+}
+.content_ h2 {
+    font-size: 21px;
+}
+.content_ p {
+    font-size: 10px;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+.app-check .img-logo {
+    margin-right: 10px;
+}
+.app-check .img-logo img {
+    width: 15px;
+    margin-top: 8px;
+}
+.app-check .name-app span {
+    line-height: 15px;
+    font-size: 9px;
+}
+.app-check .name-app span:last-child {
+    font-size: 12px;
+    line-height: 20px;
+}
+.content_ .app-check a {
+    padding: 2px 19px;
+}
+.content_ .app-check {
+    justify-content: center;
+}
+#about .wrap-item-about p {
+    font-size: 12px;
+    line-height: 20px;
+}
+#about .wrap-item-about img {
+    width: 60px;
+}
+#about .wrap-item-about .img-about {
+    padding: 25px 20px 25px;
+}
+#about .wrap-item-about .name-item-about {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 15px 0 15px;
+}
+.list-features .img-List-features img {
+    max-width: 45px;
+}
+#features .content-item-features h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+#features .content-item-features p {
+    font-size: 11px;
+    line-height: 20px;
+}
+#pricing .img-about>div {
+    padding: 25px 15px;
+    border:1px solid #226BE2;
+}
+#pricing .name-pricing {
+    font-size: 14px;
+    }
+    #pricing .listaa span {
+    font-size: 11px;
+}
+#pricing .listaa>p i {
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #2068DE;
+    border-bottom: 2px solid #2068DE;
+}
+#pricing .purchase {
+    font-size: 12px;
+    padding: 0px 25px;
+    line-height: 28px;
+}
+}
+@media (max-width: 375px){}
+.wrap-main-header {
+    padding-bottom: 90px;
 }
 }

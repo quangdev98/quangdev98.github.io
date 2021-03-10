@@ -565,7 +565,7 @@ z-index: 1;
 	position: relative;
 }
 #screenshots .box-slideshow .item-slide{
-	width: inherit;
+	/*width: inherit;*/
 	display: none;
 	color: #fff;
 	padding: 0 12px;
@@ -582,31 +582,65 @@ z-index: 1;
 	box-shadow: 0px 2px 20px #82808029;
 	transition: .5s;
 }
-#screenshots .box-slideshow .item-slide.active img{
-	/*width:;*/
+#screenshots .box-slideshow .item-slide.active a{
+	display: block;
 }
 #screenshots .control-slide{
-	display: block;
+	display: flex;
     text-align: center;
     margin: 40px 0 70px;
+    justify-content: center;
 }
 #screenshots .control-slide .prev,
- #screenshots .control-slide .next {
+ #screenshots .control-slide .next{
   cursor: pointer;
   position: relative;
   bottom: 0;
-  width: auto;
+  width: 60px;
+  height: 60px;
   padding: 16px;
-  margin-top: -22px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  border-radius: 100%;
+  background:#226BE2;
+  display: flex;
+  align-items: center;
+  margin: 10px 20px;
+  box-shadow: 0px 2px 20px #73727270;
+    justify-content: center;
 }
-#screenshots .control-slide .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+#screenshots .control-slide a span{
+	display: flex;
+	align-items: center
 }
-
+#screenshots .control-slide .next>span{
+	transform: rotate(180deg);
+}
+#screenshots .control-slide .prev>span:before,
+#screenshots .control-slide .prev>span:after,
+#screenshots .control-slide .next>span:before,
+#screenshots .control-slide .next>span:after{
+	content: "";
+	width: 0;
+    height: 0;
+    background: transparent;
+    display: block;
+}
+#screenshots .control-slide .prev>span:before,
+#screenshots .control-slide .next>span:before{
+	margin-left: 3px;
+	 border-left: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    border-right: 5px solid transparent;
+    border-top: 5px solid transparent;
+    transform: rotate(45deg);
+}
+#screenshots .control-slide .prev>span:after,
+#screenshots .control-slide .next>span:after{
+	width: 20px;
+    height: 4px;
+    background: #fff;
+    margin-left: -6px;
+}
 
 
 
