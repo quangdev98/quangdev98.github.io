@@ -103,10 +103,10 @@ function responsive() {
     // console.log(scroll);
     if (scroll < 580) {
         end = 1;
-    } else if (scroll >= 580 & scroll < 768) {
+    } else if (scroll >= 580 & scroll < 992) {
         end = 3;
     } else {
-        if (scroll >= 768 & scroll < 1200) {
+        if (scroll >= 992 & scroll < 1200) {
             end = 4;
         } else {
             end = 5;
@@ -142,6 +142,7 @@ const showTreeMenu = (listMenu, classNameSubmenu) => {
     listMenu.forEach((val, index) => {
         val.onclick = () => {
             let subMenu = val.parentElement.querySelector(`.${classNameSubmenu}`);
+            console.log(subMenu);
             if (subMenu.style.display == 'block') {
                 val.style.transform = 'rotate(0)';
                 subMenu.style.display = 'none';
