@@ -188,11 +188,12 @@ li.item-menu .menu-child .menu-child-item{
 }
 
 #header.fixed-menu .wrap-header .tryFor{
-	padding: 3px 0;
+    padding: 7px 0;
 }
 #header.fixed-menu .wrap-header .tryFor a {
 	background:#4085F6;
-	padding: 12px 44px;
+        padding: 9px 35px;
+        font-size: 23px;
 	color: #fff
 }
 @media (min-width: 768px){
