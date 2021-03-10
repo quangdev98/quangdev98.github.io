@@ -58,16 +58,12 @@ function removeSlide() {
         value.classList.remove('active');
     })
 }
-
 function displaySlide() {
-    // responsive();
     removeSlide();
     for (let i = start; i < end; i++) {
         slider[i].classList.add('active');
-        slider[i].style.width = "calc(100% /" + end + ")";
     }
 }
-
 function next() {
     start += 1;
     end += 1;
@@ -93,7 +89,6 @@ function prev() {
         displaySlide();
     }
 }
-
 function listFunction() {
     displaySlide();
     number = end;
