@@ -1,0 +1,77 @@
+@font-face {
+ font-family:Montserrat-Regular;
+ src:url('../fonts/Montserrat-Regular.ttf') format('truetype'),
+ url('../fonts/Montserrat-Regular.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Montserrat-Regular.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:Montserrat-SemiBold;
+ src:url('../fonts/Montserrat-SemiBold.ttf') format('truetype'),
+ url('../fonts/Montserrat-SemiBold.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Montserrat-SemiBold.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:Montserrat-Medium;
+ src:url('../fonts/Montserrat-Medium.ttf') format('truetype'),
+ url('../fonts/Montserrat-Medium.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Montserrat-Medium.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+/*@font-face {
+ font-family:Montserrat-Regular;
+ src:url('../fonts/Montserrat-Regular.ttf') format('truetype'),
+ url('../fonts/Montserrat-Regular.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Montserrat-Regular.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}*/
+
+
+
+
+/**/
+@font-face {
+ font-family:Poppins-Regular;
+ src:url('../fonts/Poppins-Regular.ttf') format('truetype'),
+ url('../fonts/Poppins-Regular.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Poppins-Regular.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:Poppins-SemiBold;
+ src:url('../fonts/Poppins-SemiBold.ttf') format('truetype'),
+ url('../fonts/Poppins-SemiBold.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Poppins-SemiBold.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:Poppins-Medium;
+ src:url('../fonts/Poppins-Medium.ttf') format('truetype'),
+ url('../fonts/Poppins-Medium.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Poppins-Medium.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:Poppins-Light;
+ src:url('../fonts/Poppins-Light.ttf') format('truetype'),
+ url('../fonts/Poppins-Light.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Poppins-Light.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
+@font-face {
+ font-family:Raleway-SemiBold;
+ src:url('../fonts/Raleway-SemiBold.ttf') format('truetype'),
+ url('../fonts/Raleway-SemiBold.eot#iefix') format('embedded-opentype'),
+ url('../fonts/Raleway-SemiBold.woff') format('woff');
+ font-weight:normal;
+ font-style:normal;
+}
